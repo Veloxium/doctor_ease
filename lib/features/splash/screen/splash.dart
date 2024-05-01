@@ -18,8 +18,8 @@ class SplashScreen extends StatelessWidget {
             opacity: controller.animate.value ? 1.0 : 0.0,
             duration: const Duration(milliseconds: 400),
             child: SizedBox(
-              width: 200,
-              height: 200,
+              width: 120,
+              height: 120,
               child: Image.asset(
                 "assets/logo.png",
                 fit: BoxFit.contain,
