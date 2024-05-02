@@ -1,4 +1,5 @@
 import 'package:doctor_ease/color/ccolor.dart';
+import 'package:doctor_ease/features/home/screen/home.dart';
 import 'package:doctor_ease/features/splash/screen/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: CColors.primary),
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      home: const HomeScreen(),
     );
   }
 }

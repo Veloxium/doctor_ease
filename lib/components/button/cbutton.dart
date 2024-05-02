@@ -7,8 +7,11 @@ class CustomButton extends StatelessWidget {
       required this.label,
       this.onPressed,
       this.background,
+      this.fontsize = 16.0,
       this.textColor,
       this.borderColor,
+      this.width = double.infinity,
+      this.height = 60.0,
       this.iconImage});
   final String label;
   final VoidCallback? onPressed;
@@ -16,6 +19,10 @@ class CustomButton extends StatelessWidget {
   final Color? textColor;
   final Color? borderColor;
   final String? iconImage;
+  final double height;
+  final double fontsize;
+
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +30,8 @@ class CustomButton extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         alignment: Alignment.center,
-        width: double.infinity,
-        height: 60.0,
+        width: width,
+        height: height,
         decoration: BoxDecoration(
           color: background ?? CColors.primary,
           borderRadius: BorderRadius.circular(30.0),
@@ -50,7 +57,7 @@ class CustomButton extends StatelessWidget {
               label,
               style: TextStyle(
                 color: textColor ?? Colors.white,
-                fontSize: 16.0,
+                fontSize: fontsize,
                 fontWeight: FontWeight.bold,
               ),
             ),
